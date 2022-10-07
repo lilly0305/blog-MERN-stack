@@ -9,6 +9,9 @@ import cors from "cors";
 const app = express();
 const { MONGO_URI } = config;
 
+// Routes
+import postRoutes from "./routes/api/post";
+
 app.use(hpp());
 app.use(helmet());
 
@@ -26,5 +29,6 @@ mongoose
 
 // Use routes
 app.get("/");
+app.use("/api/post", postRoutes);
 
 export default app;
