@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
 // NOTE: @routes Post api/user
 // NOTE: @desc Register user
 // NOTE: @access public
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
   console.log(req);
   const { name, email, password } = req.body;
 
