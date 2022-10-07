@@ -11,6 +11,7 @@ const { MONGO_URI } = config;
 
 // Routes
 import postRoutes from "./routes/api/post";
+import userRoutes from "./routes/api/user";
 
 app.use(hpp());
 app.use(helmet());
@@ -30,5 +31,6 @@ mongoose
 // Use routes
 app.get("/");
 app.use("/api/post", postRoutes);
+app.use("/api/user", userRoutes);
 
 export default app;
