@@ -51,7 +51,7 @@ router.post("/", async (req, res) => {
     // STEP 1: genSalt (2의배수, (salt) =>{})
     // STEP 2: hash (해시 처리해야 하는 데이터, hash된 값 (hash) =>{})
     // STEP 3: 결과 처리 1) newUser 변수의 password에 hash된 결과 값 넣기
-    // STEP 4: 결과 처리 2)
+    // STEP 4: 결과 처리 2) webtoken 생성하기
 
     bycrypt.genSalt(10, (err, salt) => {
       bycrypt.hash(newUser.password, salt, (err, hash) => {
