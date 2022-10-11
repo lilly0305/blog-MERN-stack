@@ -10,9 +10,9 @@ import config from "../../config/index";
 const router = express.Router();
 const { JWT_SECRET } = config;
 
-// NOTE: @routes Get api/user
-// NOTE: @desc Get all user
-// NOTE: @access public
+// NOTE: @routes  Get api/user
+// NOTE: @desc    Get all user
+// NOTE: @access  public
 router.get("/", async (req, res) => {
   try {
     const users = await User.find();
@@ -24,9 +24,9 @@ router.get("/", async (req, res) => {
   }
 });
 
-// NOTE: @routes Post api/user
-// NOTE: @desc Register user
-// NOTE: @access public
+// NOTE: @routes  Post api/user
+// NOTE: @desc    Register user
+// NOTE: @access  public
 router.post("/", async (req, res, next) => {
   console.log(req);
   const { name, email, password } = req.body;

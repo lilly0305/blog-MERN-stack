@@ -9,7 +9,7 @@ const { JWT_SECRET } = config;
 // Model
 import User from "../../models/user";
 
-const router = express.Router;
+const router = express.Router();
 
 // @route   POST api/auth
 // @desc    Auth user
@@ -51,3 +51,21 @@ router.post("/", (req, res) => {
     });
   });
 });
+
+// redux로 진행 예정
+router.post("/logout", (req, res) => {
+  res.json("로그아웃되었습니다.");
+});
+
+router.get("/user", auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select("-password");
+    if (!user) throw Error("유저가 존재하지 않습니다.");
+    res.json(user);
+  } catch (e) {
+    console.log(e);
+    res.status(400).json({ msg: e.message });
+  }
+});
+
+export default router;
