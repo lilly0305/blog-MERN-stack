@@ -2,3 +2,13 @@
   background: #343a40;
   color: white;
 }
+
+#page-header {
+  height: 200px;
+  background: url('../assets/img/main-banner.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  color: white;
+  border-bottom: 1px solid #eee;
+  padding-top: 60px;
+}
