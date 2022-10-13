@@ -19,8 +19,11 @@
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.4",
     "mongoose": "^6.6.5",
+    "node-sass": "^7.0.3",
     "react-router-dom": "^6.4.2",
-    "redux-first-history": "^5.1.1"
+    "react-strap": "^0.0.1",
+    "redux-first-history": "^5.1.1",
+    "sass-loader": "^13.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
