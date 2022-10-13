@@ -1,7 +1,7 @@
 import {
   legacy_createStore as createStore,
   compose,
-  applyMiddleWare,
+  applyMiddleware,
 } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { createBrowserHistory } from "history";
@@ -25,7 +25,7 @@ const composeEnhancer =
 const store = createStore(
   createRootReducer(history),
   initalState,
-  composeEnhancer(applyMiddleWare(...middlewares))
+  composeEnhancer(applyMiddleware(...middlewares))
 );
 
 sagaMiddleware.run(rootSaga);
